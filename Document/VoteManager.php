@@ -48,7 +48,7 @@ class VoteManager extends BaseVoteManager
      */
     public function __construct(DocumentManager $dm, $class)
     {
-        $this->em         = $dm;
+        $this->dm         = $dm;
         $this->repository = $dm->getRepository($class);
         $this->class      = $dm->getClassMetadata($class)->name;
     }
